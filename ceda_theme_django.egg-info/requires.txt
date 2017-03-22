@@ -1,4 +1,0 @@
-django
-
-[django-bootstrap3]
-django-bootstrap3
