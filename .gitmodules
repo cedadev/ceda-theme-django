@@ -1,0 +1,3 @@
+[submodule "ceda-theme/static/ceda-theme"]
+	path = ceda-theme/static/ceda-theme
+	url = https://github.com/cedadev/ceda-theme
