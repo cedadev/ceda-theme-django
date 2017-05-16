@@ -22,19 +22,20 @@
         <!-- Custom CSS -->
         <link href="{% static "ceda_theme/css/modern-business.css" %}" rel="stylesheet">
 
-        <!-- put any other cusomtisations in before ceda theme styling -->
-        {% block stylesheets_extra %}{% endblock %}
-        {% endblock %}
+        {# some customisations go here before ceda theme styling #}
+        {% block stylesheets_pre_extra %}{% endblock %}
 
         <link href="{% static "ceda_theme/css/ceda.css" %}" rel="stylesheet">
         <!-- Custom Fonts -->
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
+        {# most further customisations can go here, after ceda theme styling #}
+        {% block stylesheets_extra %}{% endblock %}
 
+        {% endblock %}
 
         {% block head_js %}
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
         <script src="{% static "ceda_theme/js/cookielaw.js" %}"></script>
         {% block head_js_extra %}{% endblock %}
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media
@@ -77,6 +78,10 @@
             </div>
         </nav>
         {% endblock %}
+
+        {% block page_special %}
+        {% endblock %}
+
         <div id="page" class="container">
             <div id="content-main" class="container">
             {% block cookielaw_banner %}
@@ -106,7 +111,7 @@
                     </div>
                 </div>
                 {% endblock %}
-<!-- CONTINUE FROM HERE -->
+
                 {% block notifications %}
                 {% if messages %}
                     <div class="col-md-6 col-md-offset-3">
