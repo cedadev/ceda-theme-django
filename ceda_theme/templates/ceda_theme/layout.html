@@ -64,8 +64,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     {% block branding %}
-                    <a class="navbar-brand" href="#">
-                    <!-- <img src="http://placehold.it/180x60&amp;text=Logo" alt=""> -->
+                    <a class="navbar-brand" href="{% block home_url %}/{% endblock %}">
                     <img src="{% static "ceda_theme/img/ceda_logo_transp_white_h80.png" %}" alt="CEDA logo">
           </a>
                     {% endblock %}
